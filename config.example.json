@@ -1,0 +1,13 @@
+{
+  "student": {
+    "course": "电工电子实验技术",
+    "college": "通信与信息工程学院",
+    "class": "B26010101",
+    "id": "B2601010101",
+    "name": "某某某",
+    "teacher": "某老师",
+    "term_year": "2026-2027",
+    "term_no": "1",
+    "teacher_email": ""
+  }
+}

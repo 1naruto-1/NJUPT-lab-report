@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+# 个人信息，不入库（从 config.example.json 复制）
+config.json
+# 测试用例依赖本机的课本扫描件和照片
+evals/
