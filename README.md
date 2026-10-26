@@ -1,6 +1,6 @@
 # NJUPT-lab-report
 
-南京邮电大学《电工电子实验技术》预习报告 / 实验报告助手，以 Claude Code skill 的形式使用：读课本扫描页、做理论计算和预期波形、用 [multisim-cli](https://github.com/1naruto-1/multisim-cli) 搭电路并截取真实的 Multisim 仪器面板、插入手绘电路图和波形照片，按学校官方模板生成 docx 和 pdf。
+南京邮电大学《电工电子实验技术》预习报告 / 实验报告助手，是一个通用的 Agent Skill（`SKILL.md` 格式，支持 skills 的编程 agent 都能用）：读课本扫描页、做理论计算和预期波形、用 [multisim-cli](https://github.com/1naruto-1/multisim-cli) 搭电路并截取真实的 Multisim 仪器面板、插入手绘电路图和波形照片，按学校官方模板生成 docx 和 pdf。
 
 ## 原则
 
@@ -23,12 +23,18 @@
 ## 安装
 
 ```powershell
-git clone https://github.com/1naruto-1/NJUPT-lab-report "$env:USERPROFILE\.claude\skills\ee-lab-report"
-cd "$env:USERPROFILE\.claude\skills\ee-lab-report"
+git clone https://github.com/1naruto-1/NJUPT-lab-report "$env:USERPROFILE\.agents\skills\ee-lab-report"
+cd "$env:USERPROFILE\.agents\skills\ee-lab-report"
 copy config.example.json config.json   # 填写班级、学号、姓名、指导教师等，用于封面和文件命名
 ```
 
-之后在 Claude Code 里直接说“帮我写实验四的预习报告，课本扫描件是……”即可，流程见 `SKILL.md`。
+默认放在 `~/.agents/skills/`。如果你用的 agent 只读自己的 skills 目录，建一个目录联接过去即可，例如 Claude Code：
+
+```powershell
+New-Item -ItemType Junction -Path "$env:USERPROFILE\.claude\skills\ee-lab-report" -Target "$env:USERPROFILE\.agents\skills\ee-lab-report"
+```
+
+之后对 agent 直接说“帮我写实验四的预习报告，课本扫描件是……”即可，流程见 `SKILL.md`。
 
 ## 目录
 

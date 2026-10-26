@@ -1,6 +1,6 @@
 # Multisim 仿真与真实截图（用 multisim-cli）
 
-工具本身的用法、网表和布局写法见 multisim-cli skill（`~/.claude/skills/multisim-cli/SKILL.md` 和其 `references/spec.md`）。这里只写本课程的做法。命令统一是：
+工具本身的用法、网表和布局写法见 multisim-cli skill 目录下的 `SKILL.md` 和 `references/spec.md`。这里只写本课程的做法。命令统一是：
 
 ```
 python -m multisim_cli <命令> ...
